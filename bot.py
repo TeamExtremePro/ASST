@@ -24,6 +24,11 @@ try:
   import requests
 except:
   os.system("pip install requests")
+
+try:
+  import LEGENDX
+except:
+  os.system("pip install LEGENDX")
 from requests import exceptions, get, post
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
