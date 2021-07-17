@@ -63,24 +63,24 @@ async def handler(event):
 @bot.on(events.NewMessage(pattern="/start|/START|ANDENCENTO"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-    await bot.send_message(event.chat_id, f"**Hello sir\n I am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
+    await bot.send_message(event.chat_id, f"**Hello sir\nI am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
   else:
     await bot.send_message(event.chat.id, f"**Hello sir\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
     
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"help")))
 async def help (event):
-  await event.edit("Feature coming soon")
+  await bot.send_message("Feature coming soon")
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help (event):
-  await event.edit(f"**Here are the rules for Andencento Support:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
+  await bot.send_message(f"**Here are the rules for Andencento Support:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
 
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back")))
 async def back(event):
   global AMAN
 
-  await event.edit("**Hello I am ANDENCENTO assitant.\nA simple group manager bot to manage ANDENCENTO network**", buttons=PERU)
+  await bot.send_message("**Hello I am ANDENCENTO assitant.\nA simple group manager bot to manage ANDENCENTO network**", buttons=PERU)
   
 @bot.on(events.NewMessage(pattern="/rules|/RULES"))
 async def assistant (event):
