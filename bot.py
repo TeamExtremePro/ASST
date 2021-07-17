@@ -8,9 +8,9 @@ token = os.environ.get("TOKEN")
 api_id = os.environ.get("API_ID", None)
 api_hash = os.environ.get("API_HASH", None)
 """
-api_id = "2888382"
-api_hash = "908a8a13c87a6c1899f6e788a05d3d0d"
-token = "1790025412:AAHZWT4L3J8d204oLSw9cfd5Mb2_99cA0vs"
+api_id = "3249905"
+api_hash = "ec7d3e4024ae97115b59e22dd6b4697c"
+token = "1921340877:AAE8LD8aAJFhXWiiIcVGRkLeVWBfxYzbpQ8"
 bot = TelegramClient ("legendx", api_id, api_hash).start(bot_token=token)
 devs = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
 # kanger aaya bhaago bc
