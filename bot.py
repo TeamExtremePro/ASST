@@ -63,9 +63,9 @@ async def handler(event):
 @bot.on(events.NewMessage(pattern="/start|/START|ANDENCENTO"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-    await bot.send_message(event.chat_id, f"**Hello {boy}\n I am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
+    await bot.send_message(event.chat_id, f"**Hello sir\n I am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
   else:
-    await bot.send_message(event.chat.id, f"**Hello {boy}\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
+    await bot.send_message(event.chat.id, f"**Hello sir\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
     
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"help")))
 async def help (event):
