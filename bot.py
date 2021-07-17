@@ -1,5 +1,5 @@
 
-
+pip install telethon
 from telethon import TelegramClient
 import os
 """
