@@ -8,9 +8,9 @@
         "telegram-bot",
         "assistant"
     ],
-    "repository": "https://github.com/ULTRA-OP/ASSISTANT",
-    "website": "t.me/ultraxchat",
-    "success_url": "https://t.me/ultraXoT",
+    "repository": "https://github.com/ULTRA-OP/HEROKU",
+    "website": "t.me/HEROKU",
+    "success_url": "https://t.me/HEROKU",
     "env": {
         "API_HASH": {
             "description": "You API HASH from my.telegram.org",
@@ -24,3 +24,10 @@
             "description": "Bot token, get it from @BotFather.",
             "value": ""
         }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
