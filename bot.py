@@ -89,7 +89,7 @@ async def back(event):
 @bot.on(events.NewMessage(pattern="/rules|/RULES"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-     await bot.send_message(event.chat.id, "**Click below to check group rules**",buttons=HMM)
+     await bot.send_message(event.chat.id, "**Click below to check group rules**",data=rules)
   else:
      await bot.send_message(event.chat.id, f"**Hello mate\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
 
