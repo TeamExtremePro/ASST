@@ -36,7 +36,7 @@ import re, sys, os
 
 PERU = ("Repo", "https://github.com/Noob-Stranger/andencento"), ("Channel", "t.me/Andencento")
 PERU += ("Spam", "Coming soon"), Button.url("Support", "t.me/AndencentoSupport")
-PERU += ("Rules", data="rules")
+PERU += ("Rules", data="HMM")
 
 HMM= [[custom.Button.inline("Rules", data="rules")]]
 
