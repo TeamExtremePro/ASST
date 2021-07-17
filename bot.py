@@ -34,9 +34,9 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import re, sys, os
 
-PERU = [[Button.url("Repo", "https://github.com/Noob-Stranger/andencento"), Button.url("Channel", "t.me/Andencento")]]
-PERU += [[Button.url("Spam", "Coming soon"), Button.url("Support", "t.me/AndencentoSupport")]]
-PERU += [[custom.Button.inline("Rules", data="rules")]]
+PERU = ("Repo", "https://github.com/Noob-Stranger/andencento"), ("Channel", "t.me/Andencento")
+PERU += ("Spam", "Coming soon"), Button.url("Support", "t.me/AndencentoSupport")
+PERU += ("Rules", data="rules")
 
 HMM= [[custom.Button.inline("Rules", data="rules")]]
 
@@ -90,7 +90,7 @@ async def back(event):
 @bot.on(events.NewMessage(pattern="/rules|/RULES"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-     await bot.send_message(event.chat.id, "**Click below to check group rules**",buttons=hmm)
+     await bot.send_message(event.chat.id, "**Click below to check group rules**",buttons=HMM)
   else:
      await bot.send_message(event.chat.id, f"**Hello mate\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
 
