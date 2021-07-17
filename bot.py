@@ -10,11 +10,11 @@ api_hash = os.environ.get("API_HASH", None)
 """
 api_id = "3249905"
 api_hash = "ec7d3e4024ae97115b59e22dd6b4697c"
-token = "1921340877:AAE8LD8aAJFhXWiiIcVGRkLeVWBfxYzbpQ8"
-bot = TelegramClient ("legendx", api_id, api_hash).start(bot_token=token)
+token = "1878316063:AAEnEyFVq4WK_1LpSg1gFMqfYDG0via44tA"
+bot = TelegramClient ("amanpandey", api_id, api_hash).start(bot_token=token)
 devs = set(int(x) for x in os.environ.get("DEV_USERS", "").split())
 # kanger aaya bhaago bc
-photo = "https://telegra.ph/file/20befefff7900a6b2c26e.jpg"
+photo = "https://telegra.ph/file/3d208ecf6d0ea9389d8f8.jpg"
 from telethon import events, Button, custom
 import asyncio
 import logging
@@ -29,15 +29,15 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 import re, sys, os
 
-PERU = [[Button.url("Repo", "https://github.com/ULTRA-OP/ULTRA-X"), Button.url("Channel", "t.me/UltraX_Support")]]
-PERU += [[Button.url("Spam", "https://t.me/UltraX_Spam"), Button.url("Support", "t.me/t.me/UltraXChat")]]
+PERU = [[Button.url("Repo", "https://github.com/Noob-Stranger/andencento"), Button.url("Channel", "t.me/Andencento")]]
+PERU += [[Button.url("Spam", "Coming soon"), Button.url("Support", "t.me/AndencentoSupport")]]
 PERU += [[custom.Button.inline("Rules", data="rules")]]
 
 HMM= [[custom.Button.inline("Rules", data="rules")]]
 
 hmm = [[custom.Button.inline("Back", data="back")]]
 
-alain = [[Button.url("Support", "https://t.me/UltraX_Support"), Button.url("Chat", "t.me/UltraXChat")]]
+aman = [[Button.url("Support", "https://t.me/Andencento"), Button.url("Chat", "t.me/AndencentoSupport")]]
 
 import logging
 import os
@@ -52,8 +52,8 @@ async def handler(event):
   if event.user_joined:
     pro = await event.get_user()
     boy = pro.first_name
-    if event.chat_id == -1001427249400:
-      await bot.send_file(event.chat_id, photo, caption=f"**Hello {boy} welcome to UltraX Chat\nMake sure that you read the group rules...**", buttons=HMM)
+    if event.chat_id == -1001313453168:
+      await bot.send_file(event.chat_id, photo, caption=f"**Hello {boy} welcome to Andencento Chat\nMake sure that you read the group rules...**", buttons=HMM)
     elif pro.id == 1082238780:
       await bot.send_message(event.chat.id, f"**Oh no!\nBe alert a shitty kanger {boy} has just joined chat.\nLet me inform @admins**")
     else:
@@ -62,10 +62,10 @@ async def handler(event):
 
 @bot.on(events.NewMessage(pattern="/start|/START|ULTRA"))
 async def assistant (event):
-  if event.chat_id == -1001427249400:
-    await bot.send_message(event.chat_id,"**Hello I am UltraX assitant.\nA simple group manager bot to manage UltraX network**", buttons=PERU)
+  if event.chat_id == -1001313453168:
+    await bot.send_message(event.chat_id, f"**Hello {boy}\n I am Andencento assitant.\nA simple group manager bot to manage UltraX network**", buttons=PERU)
   else:
-    await bot.send_message(event.chat.id, f"**Hello mate\nI am UltraX Assistant, Sorry to say that i only work in UltraX network.**", buttons=alain)
+    await bot.send_message(event.chat.id, f"**Hello {boy}\nI am Andencento Assistant, Sorry to say that i only work in UltraX network.**", buttons=aman)
     
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"help")))
 async def help (event):
@@ -73,21 +73,21 @@ async def help (event):
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help (event):
-  await event.edit(f"**Here are the rules for UltraXChat:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
+  await event.edit(f"**Here are the rules for ANDENCENTO SUPPORT:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
 
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back")))
 async def back(event):
-  global LEGEND
+  global AMAN
 
-  await event.edit("**Hello I am UltraX assitant.\nA simple group manager bot to manage UltraX network**", buttons=PERU)
+  await event.edit("**Hello I am ANDENCENTO assitant.\nA simple group manager bot to manage ANDENCENTO network**", buttons=PERU)
   
 @bot.on(events.NewMessage(pattern="/rules|/RULES"))
 async def assistant (event):
-  if event.chat_id == -1001427249400:
+  if event.chat_id == -1001313453168:
      await bot.send_message(event.chat.id, "**Click below to check group rules**",buttons=hmm)
   else:
-     await bot.send_message(event.chat.id, f"**Hello mate\nI am UltraX Assistant, Sorry to say that i only work in UltraX network.**", buttons=alain)
+     await bot.send_message(event.chat.id, f"**Hello mate\nI am ANDENCENTO Assistant, Sorry to say that i only work in ANDENCENTO network.**", buttons=aman)
 
 
 logging.basicConfig(
