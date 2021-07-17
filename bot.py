@@ -77,7 +77,7 @@ async def help (event):
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help (event):
-  await bot.send_message(f"**Here are the rules for Andencento Support:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
+  await bot.send_message(f"**Here are the rules for Andencento Support:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=HMM)
 
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back")))
