@@ -1,7 +1,7 @@
-
-pip install telethon
-from telethon import TelegramClient
 import os
+os.system ("pip install telethon")
+from telethon import TelegramClient
+
 """
 owner = os.environ.get("OWNER_ID", None)
 token = os.environ.get("TOKEN")
