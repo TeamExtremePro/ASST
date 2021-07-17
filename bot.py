@@ -57,15 +57,15 @@ async def handler(event):
     elif pro.id == 1082238780:
       await bot.send_message(event.chat.id, f"**Oh no!\nBe alert a shitty kanger {boy} has just joined chat.\nLet me inform @admins**")
     else:
-      await bot.send_message(event.chat.id, f"**Hello mate\nI am UltraX Assistant, Sorry to say that i only work in UltraX network.**", buttons=alain)
+      await bot.send_message(event.chat.id, f"**Hello mate\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
       
 
-@bot.on(events.NewMessage(pattern="/start|/START|ULTRA"))
+@bot.on(events.NewMessage(pattern="/start|/START|ANDENCENTO"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-    await bot.send_message(event.chat_id, f"**Hello {boy}\n I am Andencento assitant.\nA simple group manager bot to manage UltraX network**", buttons=PERU)
+    await bot.send_message(event.chat_id, f"**Hello {boy}\n I am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
   else:
-    await bot.send_message(event.chat.id, f"**Hello {boy}\nI am Andencento Assistant, Sorry to say that i only work in UltraX network.**", buttons=aman)
+    await bot.send_message(event.chat.id, f"**Hello {boy}\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
     
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"help")))
 async def help (event):
@@ -73,7 +73,7 @@ async def help (event):
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"rules")))
 async def help (event):
-  await event.edit(f"**Here are the rules for ANDENCENTO SUPPORT:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
+  await event.edit(f"**Here are the rules for Andencento Support:**\n\n-`Don't use other userbots here.`\n-`Send the full logs if your bot crashes.`\n `No pm to devs, results in ban.`\n-`No phonographic content here.`\n-`Dont spam through bot commands.`", buttons=hmm)
 
   
 @bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"back")))
@@ -87,7 +87,7 @@ async def assistant (event):
   if event.chat_id == -1001313453168:
      await bot.send_message(event.chat.id, "**Click below to check group rules**",buttons=hmm)
   else:
-     await bot.send_message(event.chat.id, f"**Hello mate\nI am ANDENCENTO Assistant, Sorry to say that i only work in ANDENCENTO network.**", buttons=aman)
+     await bot.send_message(event.chat.id, f"**Hello mate\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
 
 
 logging.basicConfig(
