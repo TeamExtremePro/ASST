@@ -41,7 +41,7 @@ HMM= [[custom.Button.inline("Rules", data="rules")]]
 
 hmm = [[custom.Button.inline("Back", data="back")]]
 
-aman = [[Button.url("Support", "https://t.me/Andencento"), Button.url("Chat", "t.me/AndencentoSupport")]]
+aman = [[Button.url("Repo", "https://github.com/Noob-Stranger/andencento"), Button.url("Chat", "t.me/AndencentoSupport")]]
 
 import logging
 import os
@@ -67,7 +67,7 @@ async def handler(event):
 @bot.on(events.NewMessage(pattern="/start|/START|ANDENCENTO"))
 async def assistant (event):
   if event.chat_id == -1001313453168:
-    await bot.send_message(event.chat_id, f"**Hello sir\nI am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=PERU)
+    await bot.send_message(event.chat_id, f"**Hello sir\nI am Andencento assitant.\nA simple group manager bot to manage Andencento network**", buttons=aman)
   else:
     await bot.send_message(event.chat.id, f"**Hello sir\nI am Andencento Assistant, Sorry to say that i only work in Andencento network.**", buttons=aman)
     
@@ -84,7 +84,7 @@ async def help (event):
 async def back(event):
   global AMAN
 
-  await bot.send_message("**Hello I am ANDENCENTO assitant.\nA simple group manager bot to manage ANDENCENTO network**", buttons=PERU)
+  await bot.send_message("**Hello I am ANDENCENTO assitant.\nA simple group manager bot to manage ANDENCENTO network**", buttons=aman)
   
 @bot.on(events.NewMessage(pattern="/rules|/RULES"))
 async def assistant (event):
